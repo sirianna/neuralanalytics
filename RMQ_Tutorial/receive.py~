@@ -2,7 +2,7 @@
 import pika
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
-    host='192.168.2.101'))
+    host='192.168.2.102', port=139))
 channel = connection.channel()
 
 channel.queue_declare(queue='hello')
